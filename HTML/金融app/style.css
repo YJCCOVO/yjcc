@@ -6,6 +6,7 @@
 .jr__body {
     padding: 0 22px;
     overflow: auto;
+    padding-bottom: 100px;
 }
 
 .jr__body .head  {
