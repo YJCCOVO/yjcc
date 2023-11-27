@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+    <template id="tel">
+        <div>
+             <h1>{{message}}</h1>
+             <h2>{{count}} 个</h2>
+             <button @click='add'>+1</button>
+             <button @click="minus">-1</button>
+        </div>
+    </template>
+
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+    Vue.createApp({
+        template:'#tel',
+        data: function() {
+            return {
+            message: 'ymx有几个女朋友',
+            count:1
+            }
+        },
+        methods:{
+            add: function() { //注意这里不能写箭头函数，写了箭头函数this指向window
+                this.count ++; //这里this指向vue
+            },
+            minus() {
+                this.count --;
+            }
+        }
+    }).mount('#app')
+</script>
+
+</body>
+</html>
