@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    img{
+      width: 200px;
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <template id="my-app">
+    <!-- <h2 v-text="msg"></h2> -->
+    <img v-bind:src="imgUrl" alt="">
+    <a :href="link">百度一下</a>
+
+  </template>
+
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script>
+    const App = {
+      template: '#my-app',
+      data() {
+        return {
+          msg: 'hello world',
+          imgUrl: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2Fc0271e06-53c3-47f5-922d-1d06a6126172%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1703762598&t=caa29b2226c2dd8ab2e81792c6cd06a7',
+          link: 'https://www.baidu.com'
+        }
+      }
+    }
+
+    Vue.createApp(App).mount('#app')
+  </script>
+
+</body>
+</html>
