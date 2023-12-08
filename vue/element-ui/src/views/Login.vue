@@ -40,7 +40,7 @@
                 // this.$router.push(`/home/${this.account}`) 第一种路由传参
                 // this.$router.push({path:'/home',query:{user:this.account}}) 第二种路由传参
                 // this.$router.push({name:'home',params:{user:this.account}}) 第三种
-                this.$router.push({path:'home',hash:`${this.account}`})
+                this.$router.push({path:'/home',hash:`${this.account}`})
 
 
             }
