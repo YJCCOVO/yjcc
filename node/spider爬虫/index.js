@@ -2,7 +2,7 @@ const https = require('https')
 const cheerio = require('cheerio')
 const fs = require('fs')
 
-https.get('https://movie.douban.com/top250', (res) => {
+https.get('https://movie.douban.com/top250?start=0&filter=', (res) => {
   let html = ''
 
   res.on('data', (chunk) => { // 监听数据的读取
